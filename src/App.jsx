@@ -24,13 +24,13 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar movieEntity={movieEntity} />
+      {/* <Navbar movieEntity={movieEntity} /> */}
       <MainModal
         data={modalData}
         isVisibile={isModalVisibile}
         onModalClick={setModalVisibility}
       />
-      <MainSection modalVisibility={onHandleModal} />
+      <MainSection modalVisibility={onHandleModal} movieEntity={movieEntity} />
       <MainInput inputValue={inputValue} setInputValue={setInputValue} />
       <MovieEntity
         movieEntity={movieEntity}

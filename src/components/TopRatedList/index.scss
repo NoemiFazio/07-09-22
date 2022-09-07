@@ -1,12 +1,20 @@
 @import "../../styles/_mixins.scss";
+@import "../../styles/_variables.scss";
 
 .TopRatedList {
-  @include flex-element(row, center, center, wrap, 20px);
+  @include flex-element(column, center, center, wrap, 20px);
 
   width: 100%;
   height: fit-content;
+  margin: 20px 0;
 
-  .TopRatedList_content {
+  &_title {
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  &_content {
     @include flex-element(row, space-between, stretch, wrap, 20px);
 
     width: 800px;

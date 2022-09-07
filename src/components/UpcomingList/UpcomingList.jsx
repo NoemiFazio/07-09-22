@@ -11,6 +11,7 @@ const UpcomingList = ({
   return (
     // in Cardstyle dovremmo mettere in teoria il nome di una classe (tipo cardStyle=topRatedStyle), quindi vai a maincard
     <div className="UpcomingList">
+      <h2 className="UpcomingList_title">Upcoming</h2>
       <div className="UpcomingList_content">
         {cardData.map((cardData, ii) => (
           <MainCard

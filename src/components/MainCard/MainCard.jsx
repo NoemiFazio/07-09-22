@@ -12,7 +12,7 @@ const MainCard = ({
   setFavouriteList,
   isBtnVisible = true,
 }) => {
-  const { title, vote_average, poster_path, id, overview } = cardData;
+  const { title, vote_average, poster_path } = cardData;
 
   return (
     <div className={value.className}>

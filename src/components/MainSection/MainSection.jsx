@@ -3,11 +3,12 @@ import MainCard from "../MainCard";
 import TopRatedList from "../TopRatedList";
 import UpcomingList from "../UpcomingList";
 import LikedList from "../LikedList";
+import Navbar from "../Navbar";
 import Counter from "../Counter";
 import { GET } from "../../utils/api";
 import "./index.scss";
 
-const MainSection = ({ modalVisibility }) => {
+const MainSection = ({ modalVisibility, movieEntity }) => {
   const [movieLists, setMovieLists] = useState({});
   const [favouriteList, setFavouriteList] = useState([]);
   const [page, setPage] = useState(1);
@@ -28,16 +29,19 @@ const MainSection = ({ modalVisibility }) => {
 
   return (
     <div className="MainSection">
+      <Navbar movieEntity={movieEntity} />
       <div className="MainSection_div">
-        {movieLists.popular && (
-          <MainCard
-            cardData={movieLists.popular[0]}
-            modalVisibility={modalVisibility}
-            isBtnVisible={false}
-            favouriteList={favouriteList}
-            setFavouriteList={setFavouriteList}
-          />
-        )}
+        <div className="MainSection_left">
+          {movieLists.popular && (
+            <MainCard
+              cardData={movieLists.popular[0]}
+              modalVisibility={modalVisibility}
+              isBtnVisible={false}
+              favouriteList={favouriteList}
+              setFavouriteList={setFavouriteList}
+            />
+          )}{" "}
+        </div>
         <div className="MainSection_right">
           {movieLists.topRated && (
             <>

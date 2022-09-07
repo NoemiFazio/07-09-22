@@ -3,15 +3,12 @@
 
 .Navbar {
   @include flex-element(row, center, center);
-  position: absolute;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  //li ho commentati perché definiti con il sass importato
+  // position: absolute;
+
   height: 40px;
   width: 100%;
-  background-color: rgba(22, 22, 22, 0.507);
-  z-index: index 9;
+  margin-bottom: 20px;
+  z-index: 0;
   height: fit-content;
 
   ul {
@@ -28,7 +25,17 @@
       a {
         color: $base-color;
         font-weight: 800;
+        font-size: 25px;
         text-decoration: none;
+        transition: 0.45s;
+
+        &:hover {
+          color: white;
+        }
+      }
+
+      img {
+        width: 370px;
       }
     }
   }

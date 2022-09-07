@@ -3,7 +3,7 @@
 .MainSection {
   @include flex-element(column, flex-start, stretch, nowrap, 0px);
 
-  padding: 100px 60px;
+  padding: 50px 60px;
   background: rgb(30, 30, 30);
   background-image: linear-gradient(
       rgba(15, 10, 10, 0.949),
@@ -13,11 +13,19 @@
     url("../../images/fakeflix-hero.jpg");
 
   height: fit-content;
+  z-index: 0;
 
   &_div {
     @include flex-element();
 
     height: fit-content;
+  }
+
+  &_left {
+    @include flex-element(row, flex-start, center);
+
+    // width: 1000px;
+    align-items: center;
   }
 
   &_right {

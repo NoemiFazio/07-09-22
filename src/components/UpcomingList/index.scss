@@ -1,10 +1,17 @@
 @import "../../styles/_mixins.scss";
 
 .UpcomingList {
-  @include flex-element(row, center, center, wrap, 20px);
+  @include flex-element(column, center, center, wrap, 20px);
 
   width: 100%;
   height: fit-content;
+  margin: 20px 0;
+
+  &_title {
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
 
   .UpcomingList_content {
     @include flex-element(row, flex-start, stretch, nowrap, 20px);

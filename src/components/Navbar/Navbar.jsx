@@ -18,8 +18,8 @@ const Navbar = ({ movieEntity }) => {
           <img src={logo} alt="fakeflix" />
         </li>
         <li>
-          <a href="/">Movies</a>
-          <a href="/">Series</a>
+          {/* <a href="/">Movies</a>
+          <a href="/">Series</a> */}
           <a href="/" onClick={scrollTopRated}>
             What are you looking for?
           </a>

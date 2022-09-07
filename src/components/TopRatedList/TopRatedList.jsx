@@ -12,6 +12,7 @@ const TopRatedList = ({
   return (
     // in Cardstyle dovremmo mettere in teoria il nome di una classe (tipo cardStyle=topRatedStyle), quindi vai a maincard
     <div className="TopRatedList">
+      <h2 className="TopRatedList_title">Top Rated</h2>
       <div className="TopRatedList_content">
         {cardData.slice(0, nCards).map((cardData, ii) => (
           <MainCard

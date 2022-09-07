@@ -43,9 +43,6 @@ const MainInput = ({ inputValue, setInputValue }) => {
       <form className="MainInput" onSubmit={onHandleSubmit}>
         {isInputVisibile && (
           <>
-            <button type="submit">
-              <BsSearch />
-            </button>{" "}
             <input
               ref={inputRef}
               value={inputValue}
@@ -54,6 +51,9 @@ const MainInput = ({ inputValue, setInputValue }) => {
               maxLength="6"
               placeholder="Search by Id"
             />
+            <button type="submit">
+              <BsSearch />
+            </button>
           </>
         )}
       </form>

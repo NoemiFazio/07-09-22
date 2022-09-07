@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const MainModal = ({ data, isVisibile, onModalClick }) => {
   const { title, overview, poster_path, id } = data;
@@ -14,17 +14,17 @@ const MainModal = ({ data, isVisibile, onModalClick }) => {
 
   return (
     isVisibile && (
-      <div className="Modal__overlay">
-        <div className="Modal">
+      <div className={styles.Overlay}>
+        <div className={styles.Modal}>
           <img
-            className="Modal__img"
+            className={styles.img}
             src={`https://image.tmdb.org/t/p/w342${poster_path}`}
             alt={title}
           />
-          <div className="Modal__info">
+          <div className={styles.info}>
             <button onClick={() => onModalClick(false)}>X</button>
-            <h2 className="Modal__header">{title}</h2>
-            <p className="Modal__desc">{overview}</p>
+            <h2 className={styles.header}>{title}</h2>
+            <p className={styles.desc}>{overview}</p>
           </div>
         </div>
       </div>

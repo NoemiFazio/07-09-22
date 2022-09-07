@@ -2,12 +2,7 @@ import { memo } from "react";
 import MainCard from "../MainCard";
 import "./index.scss";
 
-const LikedList = ({
-  cardData,
-  modalVisibility,
-  favouriteList,
-  setFavouriteList,
-}) => {
+const LikedList = ({ modalVisibility, favouriteList, setFavouriteList }) => {
   return (
     <div className="LikedList">
       <h1>Favourites ❤️</h1>
